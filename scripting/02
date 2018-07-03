@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "0 4 * * 0 sudo apt-get update > /var/log/update_script.log && sudo apt-get upgrate >> /var/log/update_script.log" > tmp
+crontab tmp
+rm tmp
